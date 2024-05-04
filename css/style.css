@@ -2,6 +2,7 @@
     --primary-color: #282828;
     --secondary-color: #101010;
     --golden-color: #D5B47E;
+    --white: #F2ECFF;
 }
 
 @font-face {
@@ -13,12 +14,15 @@
     scrollbar-width: thin;
     scrollbar-color: #282828 #101010;
 }
+
 *::-webkit-scrollbar {
     width: 12px;
 }
+
 *::-webkit-scrollbar-track {
     background: #101010;
 }
+
 *::-webkit-scrollbar-thumb {
     background-color: #282828;
     border-radius: 20px;
@@ -36,8 +40,14 @@ body {
     font-optical-sizing: auto; */
     font-family: majalla;
 
-    color: white;
+    color: var(--white);
     direction: rtl;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        background: var(--primary-color);
+    }
 }
 
 .primary-color {
@@ -52,12 +62,16 @@ body {
     color: var(--golden-color) !important;
 }
 
+.white-color {
+    color: var(--white);
+}
+
 .primary-bg {
     background-color: var(--primary-color) !important;
 }
 
 .secondary-bg {
-    background-color: var(--secondary-color-color) !important;
+    background-color: var(--secondary-color) !important;
 }
 
 .golden-bg {
@@ -67,7 +81,7 @@ body {
 .btn-primary,
 .btn-primary:active,
 .btn-primary:focus {
-    color: white !important;
+    color: var(--secondary-color) !important;
     background-color: var(--golden-color) !important;
     box-shadow: 0 8px 9px -4px #d5b47e52 !important;
 }
@@ -80,11 +94,49 @@ body {
 .btn-secondary,
 .btn-secondary:active,
 .btn-secondary:focus {
-    color: white !important;
+    color: var(--golden-color) !important;
     background-color: var(--secondary-color) !important;
+}
+
+.form-control {
+    border-color: var(--golden-color) !important;
+}
+
+.form-control:focus~.form-label {
+    color: var(--golden-color) !important;
+    border-color: var(--golden-color) !important;
+}
+
+.form-control:focus~.form-notch {
+    border-color: var(--golden-color) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d5b47e52 !important;
+}
+
+.form-outline .form-control:focus~.form-notch .form-notch-leading {
+    border-color: var(--golden-color);
+    box-shadow: 1px 0 0 0 var(--golden-color), 0 1px 0 0 var(--golden-color), 0 -1px 0 0 var(--golden-color);
+}
+
+.form-outline .form-control:focus ~ .form-notch .form-notch-middle {
+    border-color: rgba(0, 0, 0, 0) var(--golden-color) var(--golden-color);
+    box-shadow: var(--golden-color) 0px 1px 0px 0px;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+.form-outline .form-control:focus~.form-notch .form-notch-trailing {
+    border-color: var(--golden-color);
+    box-shadow: -1px 0 0 0 var(--golden-color), 0 -1px 0 0 var(--golden-color), 0 1px 0 0 var(--golden-color);
 }
 
 .my-6 {
     margin-top: 10rem !important;
     margin-bottom: 10rem !important;
+}
+
+#news {
+    /* background: linear-gradient(to bottom,
+    var(--primary-color) 0%,
+    var(--primary-color) 60%,
+    var(--secondary-color) 60%,
+    var(--secondary-color) 100%); */
 }
