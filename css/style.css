@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #282828;
+    --secondary-color: #101010;
+    --golden-color: #D5B47E;
+}
+
+@font-face {
+    font-family: majalla;
+    src: url(../fonts/majalla.ttf);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #282828 #101010;
+}
+*::-webkit-scrollbar {
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: #101010;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #282828;
+    border-radius: 20px;
+    border: 3px solid #101010;
+}
+
+body {
+    /* background-color: var(--primary-color); */
+    background: linear-gradient(to right,
+            var(--primary-color) 0%,
+            var(--primary-color) 60%,
+            var(--secondary-color) 60%,
+            var(--secondary-color) 100%);
+    /* font-family: "Changa", sans-serif;
+    font-optical-sizing: auto; */
+    font-family: majalla;
+
+    color: white;
+    direction: rtl;
+}
+
+.primary-color {
+    color: var(--primary-color) !important;
+}
+
+.secondary-color {
+    color: var(--secondary-color) !important;
+}
+
+.golden-color {
+    color: var(--golden-color) !important;
+}
+
+.primary-bg {
+    background-color: var(--primary-color) !important;
+}
+
+.secondary-bg {
+    background-color: var(--secondary-color-color) !important;
+}
+
+.golden-bg {
+    background-color: var(--golden-color) !important;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus {
+    color: white !important;
+    background-color: var(--golden-color) !important;
+    box-shadow: 0 8px 9px -4px #d5b47e52 !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--golden-color) !important;
+    box-shadow: 0 8px 9px -4px #d5b47e52, 0 4px 18px 0 #d5b47e4b !important;
+}
+
+.btn-secondary,
+.btn-secondary:active,
+.btn-secondary:focus {
+    color: white !important;
+    background-color: var(--secondary-color) !important;
+}
+
+.my-6 {
+    margin-top: 10rem !important;
+    margin-bottom: 10rem !important;
+}
